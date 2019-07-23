@@ -1,0 +1,362 @@
+<!doctype html>
+<html class="no-js fixed-layout" xmlns:wb="http://open.weibo.com/wb">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>火星微博</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="index">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta property="wb:webmaster" content="d7f0a278a200fc43" />
+  <link rel="icon" type="image/png" href="/Public/assets/i/favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="/Public/assets/i/app-icon72x72@2x.png">
+  <meta name="apple-mobile-web-app-title" content="火星微博" />
+  <link rel="stylesheet" href="/Public/assets/css/amazeui.min.css"/>
+  <link rel="stylesheet" href="/Public/assets/css/admin.css">
+  <!--[if lt IE 9]>
+  <script src="/Public/js/jquery.min.js"></script>
+  <script src="/Public/js/modernizr.js"></script>
+  <script src="/Public/assets/js/amazeui.ie8polyfill.min.js"></script>
+  <![endif]-->
+
+  <!--[if (gte IE 9)|!(IE)]><!-->
+  <script src="/Public/assets/js/jquery.min.js"></script>
+  <!--<![endif]-->
+  <script src="/Public/assets/js/amazeui.min.js"></script>
+  <script src="/Public/assets/js/app.js"></script>
+  <script type="text/javascript" src="/Public/layer/layer.js"></script>
+  <script type="text/javascript">
+      $(function(){
+          setInterval(function(){
+              $.get("/index/index.html");
+          },30000);
+      })
+  </script>
+<meta name="__webo__" content="7b6005e3062a0afe10dfb9d7ffd4900d_335da99b6d86c55ec3f14b4dbf0234fe" /></head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，平台暂不支持。 请 <a href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+<header class="am-topbar am-topbar-inverse admin-header">
+  <div class="am-topbar-brand">
+    <strong>火星</strong> <small>营销推广平台</small>
+  </div>
+
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse" id="topbar-collapse">
+
+    <ul class="am-nav am-nav-pills am-topbar-nav am-topbar-right admin-header-list">
+      <li><a href="javascript:;"><span class="am-icon-jpy"></span> 账户 <span class="am-badge am-badge-warning">3.8554</span></a></li>
+      <li class="am-dropdown" data-am-dropdown>
+        <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+          <span class="am-icon-user-plus"></span> 453453453 <span class="am-icon-caret-down"></span>
+        </a>
+        <ul class="am-dropdown-content">
+          <li><a href="/index/profile.html"><span class="am-icon-user"></span> 资料</a></li>
+          <!-- <li><a href="#"><span class="am-icon-cog"></span> 设置</a></li> -->
+          <li><a href="/user/logout.html"><span class="am-icon-power-off"></span> 退出</a></li>
+        </ul>
+      </li>
+      <li class="am-hide-sm-only"><a href="javascript:;" id="admin-fullscreen"><span class="am-icon-arrows-alt"></span> <span class="admin-fullText">开启全屏</span></a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="am-cf admin-main">
+  <!-- sidebar start -->
+  <div class="admin-sidebar am-offcanvas" id="admin-offcanvas">
+    <div class="am-offcanvas-bar admin-offcanvas-bar">
+      <ul class="am-list admin-sidebar-list">
+  <li class="current"><a href="/index/index.html"><span class="am-icon-home"></span> 首页</a></li>
+  <li class="admin-parent">
+    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 快速 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+    <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
+      <li><a href="/index/fans/type/12.html" class="am-cf"><span class="am-icon-check"></span> 精品 日速1万<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+      <li><a href="/index/fans/type/1.html" class="am-cf"><span class="am-icon-check"></span> 顶级 日速2万<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+      <li><a href="/index/fans/type/4.html" class="am-cf"><span class="am-icon-check"></span> 初级 日速5千<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>    
+      <li><a href="/index/praise.html"><span class="am-icon-puzzle-piece"></span> 微博/评论点赞</a></li>
+      <li><a href="/index/forwarding/type/vip.html"><span class="am-icon-th"></span> 刷量转发/评论</a></li>
+      <li><a href="/index/forwarding/type/adv.html"><span class="am-icon-th"></span> 高级转发/评论</a></li>
+    </ul>
+  </li>
+  <li class="admin-parent">
+    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 普通 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+    <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
+      <li><a href="/task/fans/type/12.html" class="am-cf"><span class="am-icon-check"></span> 精品 日速5千<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+      <li><a href="/task/fans/type/1.html" class="am-cf"><span class="am-icon-check"></span> 顶级 日速5千<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+      <li><a href="/task/fans/type/4.html" class="am-cf"><span class="am-icon-check"></span> 初级 日速1万<span class="am-icon-star am-fr am-margin-right admin-icon-yellow"></span></a></li>
+    </ul>
+  </li>
+  <li><a href="/user/logout.html" onclick="if(!confirm('确定退出吗？')) return false;"><span class="am-icon-sign-out"></span> 注销</a></li>
+</ul>
+<div class="am-panel am-panel-default admin-sidebar-panel">
+  <div class="am-panel-bd">
+    <p><span class="am-icon-bookmark"></span> 公告</p>
+    <p>充值支付宝jiag135@126.com（陈平清） 充值时候付款说明请填写自己平台账号 客服QQ2894522741
+</p>
+  </div>
+</div>
+    </div>
+  </div>
+  <!-- sidebar end -->
+
+  <!-- content start -->
+  <div class="admin-content">
+    <div class="admin-content-body">
+      <div class="am-cf am-padding am-padding-bottom-0">
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">微博初级粉丝</strong> / <small>Fans</small></div>
+      </div>
+
+      <hr>
+
+      <div class="am-g">
+        <div class="am-u-sm-12 am-u-md-9">
+          <div class="am-btn-toolbar">
+            <div class="am-btn-group am-btn-group-sm">
+              <a class="am-btn am-btn-warning am-margin-right-xs am-active" href="/index/fans/type/4.html"><i class="am-icon-area-chart"></i> 微博初级粉丝 </a>
+              <a href="/index/task/type/4.html" class="am-btn am-btn-success am-margin-right-xs"><span class="am-icon-plus"></span> 单个任务</a>
+              <a href="/index/taskmore/type/4.html" class="am-btn am-btn-success am-margin-right-xs"><span class="am-icon-plus-square"></span> 批量任务</a>
+            </div>
+            <div class="am-btn-group am-btn-group-xs">
+              <a href="/index/fans/status/1/type/4.html" class="am-btn am-btn-default ">进行中</a>
+              <a href="/index/fans/status/2/type/4.html" class="am-btn am-btn-default ">暂停</a>
+              <a href="/index/fans/status/3/type/4.html" class="am-btn am-btn-default ">退款</a>
+              <a href="/index/fans/status/4/type/4.html" class="am-btn am-btn-default ">已完成</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="am-u-sm-12 am-u-md-3 am-u-sm-uncentered">
+        <form class="am-form" method="get" action="/index/fans.html">
+          <div class="am-input-group am-input-group-sm">
+            <input type="text" class="am-form-field" name="words" placeholder="编号/昵称/UID">
+            <input type="hidden" value="4" name="type">
+          <span class="am-input-group-btn">
+            <button class="am-btn am-btn-default" type="submit">搜索</button>
+          </span>
+          </div>
+        <input type="hidden" name="__webo__" value="7b6005e3062a0afe10dfb9d7ffd4900d_335da99b6d86c55ec3f14b4dbf0234fe" /></form>
+        </div>
+      </div>
+
+      <div class="am-g">
+        <div class="am-u-sm-12">
+          <form class="am-form">
+            <table class="am-table am-table-striped am-table-hover table-main">
+              <thead>
+              <tr align="center">
+                <th class="am-text-center">订单编号</th>
+                <th class="am-text-center">微博昵称</th>
+                <th class="am-text-center">微博ID</th>
+                <th class="am-text-center">总进度</th>
+                <th class="am-text-center">初始量/当前量</th>
+                <th class="am-text-center">状态</th>
+                <th class="am-text-center">操作</th>
+                <th class="am-text-center">执行时间</th>
+                <th class="am-text-center">费用</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr align="center">
+                <td>201907195455545286</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>0/100</td>
+                <td class="am-hide-sm-only">559/0</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/19 09:08:05</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907195197495313</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>0/100</td>
+                <td class="am-hide-sm-only">559/0</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/19 09:07:46</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907194910050548</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>0/100</td>
+                <td class="am-hide-sm-only">559/0</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/19 09:06:08</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907195050985117</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>0/100</td>
+                <td class="am-hide-sm-only">559/0</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/19 08:53:05</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907191005797959</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>0/100</td>
+                <td class="am-hide-sm-only">559/0</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/19 08:45:00</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907194897545419</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>5/100</td>
+                <td class="am-hide-sm-only">554/559</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/19 08:40:15</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907185448974960</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>0/100</td>
+                <td class="am-hide-sm-only">554/0</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/18 19:39:17</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907181029910199</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>0/100</td>
+                <td class="am-hide-sm-only">554/0</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/18 19:29:19</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907185256511084</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>1/100</td>
+                <td class="am-hide-sm-only">553/554</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/18 19:26:59</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907181025610066</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>14/100</td>
+                <td class="am-hide-sm-only">539/553</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/18 19:18:38</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907181024957958</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>12/100</td>
+                <td class="am-hide-sm-only">527/539</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/18 19:11:26</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907185352541074</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>3/100</td>
+                <td class="am-hide-sm-only">524/527</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/18 19:10:28</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907185455101449</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>0/100</td>
+                <td class="am-hide-sm-only">524/0</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/18 19:09:41</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907185754555587</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>1/100</td>
+                <td class="am-hide-sm-only">523/524</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/18 19:08:56</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr><tr align="center">
+                <td>201907181015551599</td>
+                <td>Mr_later</td>
+                <td><a href="http://weibo.com/u/1826792403" target="_blank">1826792403</a></td>
+                <td>0/100</td>
+                <td class="am-hide-sm-only">523/0</td>
+                                  <td class="am-hide-sm-only am-text-warning"><i class="am-icon-power-off"></i> 已退款</td>
+                                                <td></td>                <td>2019/07/18 19:07:25</td>
+                <td><span class="am-text-warning">0.1200</span></td>
+              </tr>              
+              </tbody>
+            </table>
+            <div class="am-cf">
+              <div class="am-fl am-padding">共 71 条记录</div> <div class="am-fr"><ul class="am-pagination"> <li class="am-disabled"><a href="javascript:;">«</a></li> <li class="am-active"><a class="current" href="javascript:;">1</a></li><li><a class="num" href="/index/fans/type/4/words/1826792403/__webo__/15c22aa76634d0be0cbc174996c7128e_81e47b95eb7be6c40db4dbabae7fe000/p/2.html">2</a></li><li><a class="num" href="/index/fans/type/4/words/1826792403/__webo__/15c22aa76634d0be0cbc174996c7128e_81e47b95eb7be6c40db4dbabae7fe000/p/3.html">3</a></li><li><a class="num" href="/index/fans/type/4/words/1826792403/__webo__/15c22aa76634d0be0cbc174996c7128e_81e47b95eb7be6c40db4dbabae7fe000/p/4.html">4</a></li><li><a class="num" href="/index/fans/type/4/words/1826792403/__webo__/15c22aa76634d0be0cbc174996c7128e_81e47b95eb7be6c40db4dbabae7fe000/p/5.html">5</a></li> <li><a class="next" href="/index/fans/type/4/words/1826792403/__webo__/15c22aa76634d0be0cbc174996c7128e_81e47b95eb7be6c40db4dbabae7fe000/p/2.html">»</a></li> </ul></div>            </div>
+            <hr />
+          <input type="hidden" name="__webo__" value="7b6005e3062a0afe10dfb9d7ffd4900d_335da99b6d86c55ec3f14b4dbf0234fe" /></form>
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="admin-content-footer">
+      <hr>
+      <p class="am-padding-left">© 2014 火星微博, Inc. Licensed under MIT license.</p>
+    </footer>
+
+  </div>
+  <!-- content end -->
+</div>
+
+<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+
+<script type="text/javascript">
+$(function(){
+    $('.refund').click(function(){
+        var taskId = $(this).data('taskid');
+        var index = layer.load(2, {shade: [0.3,'#fff']});
+        $.get("/index/refund.html",{'taskId':taskId}).then(function(data){
+            layer.close(index);
+            layer.msg(data.info,{shift:1},function(){
+                if(data.url){
+                    window.location.href = data.url;
+                }else{
+                  window.location.reload();
+                }
+            });
+        },function(){
+            alert('通讯失败，请重试');
+            layer.close(index);
+        });
+    });
+
+    $('.action').click(function(){
+        var taskId = $(this).data('taskid');
+        var index = layer.load(2, {shade: [0.3,'#fff']});
+        $.get("/index/switchoff.html",{'taskId':taskId}).then(function(data){
+            layer.close(index);
+            layer.msg(data.info,{shift:1},function(){
+                if(data.url){
+                    window.location.href = data.url;
+                }else{
+                  window.location.reload();
+                }
+            });
+        },function(){
+            alert('通讯失败，请重试');
+            layer.close(index);
+        });
+    });
+})
+</script>
+</body>
+</html>

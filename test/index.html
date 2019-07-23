@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>火星营销推广平台 - 用户登录</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta property="wb:webmaster" content="51cb067754dfdd57" />
+  <link rel="alternate icon" type="image/png" href="/Public/assets/i/favicon.png">
+  <link rel="stylesheet" href="/Public/assets/css/amazeui.min.css"/>
+  <script type="text/javascript" src="/Public/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/Public/assets/js/amazeui.min.js"></script>
+  <script type="text/javascript" src="/Public/layer/layer.js"></script>
+  <style>
+    .header {
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 200%;
+      color: #333;
+      margin-top: 30px;
+    }
+    .header p {
+      font-size: 14px;
+    }
+    body{
+      background: url(/Public/images/login-bg.jpg) no-repeat center center;
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="am-g">
+    <h1>火星微博</h1>
+    <p>Integrated Development Environment<br/>火星微博营销推广平台</p>
+  </div>
+  <hr />
+</div>
+<div class="am-g">
+  <div class="am-u-lg-4 am-u-md-8 am-u-sm-centered">
+    <h3>用户登录</h3>
+    <hr>
+    <form method="post" class="am-form am-form-horizontal" action="index.html" autocomplete="off" id="login">
+      <div class="am-form-group">
+        <label for="doc-ipt-3" class="am-u-sm-3 am-form-label">账号</label>
+        <div class="am-u-sm-9">
+          <input type="email" id="doc-ipt-3" placeholder="用户名" name="username" class="js-pattern-username" required minlength="6" maxlength="32">
+        </div>
+      </div>
+
+      <div class="am-form-group">
+        <label for="doc-ipt-pwd-2" class="am-u-sm-3 am-form-label">密码</label>
+        <div class="am-u-sm-9">
+          <input type="password" id="doc-ipt-pwd-2" placeholder="请输入密码" name="password" required minlength="6" maxlength="32">
+        </div>
+      </div>
+
+      <div class="am-form-group">
+          <label for="doc-ipt-pwd-4" class="am-u-sm-3 am-form-label">验证码</label>
+          <div class="am-u-sm-9">
+            <div class="am-u-lg-6 am-padding-0">
+              <input id="doc-ipt-pwd-4" name="verify_code" class="am-input-sm" placeholder="验证码" type="text" required pattern="^\d{4}$">
+            </div>
+            <div class="am-u-lg-6 am-padding-0"><img src="/user/verify_code.html" title="看不清？单击此处刷新" onclick="this.src='/user/verify_code.html?rand='+Math.random();" style="cursor: pointer;"></div>
+          </div>
+      </div>
+      <div class="am-cf">
+        <div class="am-u-lg-12 am-text-right">
+          <button type="submit" class="am-btn am-btn-primary am-btn-sm btn-loading-example am-btn-loading" data-am-loading="{spinner: 'circle-o-notch', loadingText: '正在登录...', resetText: '登 录'}">登 录</button>
+          <button type="button" onclick="window.location.href='/user/register.html'" class="am-btn am-btn-default am-btn-sm">注 册</button>
+        </div>
+      </div>
+    </form>
+    <hr>
+    <p>© 2015 火星微博, Inc. Licensed under MIT license.</p>
+  </div>
+</div>
+<script type="text/javascript">
+$('#login').validator({
+    patterns: {
+        username:/^[a-zA-Z0-9_@.]+$/,
+    },
+    validateOnSubmit: true,
+    validClass:'',
+    // 域验证通过时添加的操作，通过该接口可定义各种验证提示
+    markValid: function(validity) {
+      // this is Validator instance
+      var options = this.options;
+      var $field  = $(validity.field);
+      var $parent = $field.closest('.am-form-group');
+      $field.addClass(options.validClass).removeClass(options.inValidClass);
+      $parent.removeClass('am-form-error');
+      options.onValid.call(this, validity);
+    },
+
+    // 域验证失败时添加的操作，通过该接口可定义各种验证提示
+    markInValid: function(validity) {
+      var options = this.options;
+      var $field  = $(validity.field);
+      var $parent = $field.closest('.am-form-group');
+      $field.addClass(options.inValidClass + ' ' + options.activeClass).removeClass(options.validClass);
+      $parent.addClass('am-form-error').removeClass('am-form-success');
+      options.onInValid.call(this, validity);
+    }, 
+
+    submit:function(){
+      var formValidity = this.isFormValid();
+      if(formValidity){
+          var $btn = $('.btn-loading-example');
+          $btn.button('loading');
+          $.post("/user/login.html",$("#login").serialize()).then(function(data){
+              if(data.status == 0){
+                  layer.msg(data.info);
+                  $btn.button('reset');
+              }else{
+                  layer.msg(data.info,{shift: -1},function(){
+                      window.location.href = data.url;
+                  });
+              }
+          },function(){
+              alert('通讯失败，请重试');
+              $btn.button('reset');
+          });
+      }
+      return false;
+    }      
+});
+</script>
+</body>
+</html>
